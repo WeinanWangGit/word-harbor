@@ -8,6 +8,12 @@ export const defaultUserState: UserState = {
   masteryMap: {},
   dailyGachaRemaining: 3,
   lastLoginDate: '',
+  // v2 新增
+  pityCount: 0,
+  secretaryCardId: null,
+  dailyReviewDone: false,
+  bonusGacha: 0,
+  newCardIds: [],
 }
 
 // 从 localStorage 加载状态

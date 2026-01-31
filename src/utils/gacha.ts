@@ -36,10 +36,38 @@ function pickRandomCard(rarity: number): Card {
   return pool[Math.floor(Math.random() * pool.length)]
 }
 
-// 执行一次抽卡
+// 执行一次抽卡（普通）
 export function performGacha(): Card {
   const rarity = rollRarity()
   return pickRandomCard(rarity)
+}
+
+// 执行一次抽卡（带保底机制）
+export function performGachaWithPity(pityCount: number): { card: Card; isHighRarity: boolean } {
+  let rarity: number
+
+  // 保底：连续9次未出3星以上，第10次必出
+  if (pityCount >= 9) {
+    // 强制从3星及以上抽取
+    const highRarityWeights = { 3: 70, 4: 30 }
+    const total = 100
+    let random = Math.random() * total
+    rarity = 3
+    for (const [r, weight] of Object.entries(highRarityWeights)) {
+      random -= weight
+      if (random <= 0) {
+        rarity = parseInt(r)
+        break
+      }
+    }
+  } else {
+    rarity = rollRarity()
+  }
+
+  const card = pickRandomCard(rarity)
+  const isHighRarity = rarity >= 3
+
+  return { card, isHighRarity }
 }
 
 // 获取稀有度对应的颜色

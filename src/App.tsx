@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import Gacha from './pages/Gacha'
 import Collection from './pages/Collection'
 import CardDetail from './pages/CardDetail'
+import Review from './pages/Review'
 import BottomNav from './components/Layout/BottomNav'
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="/gacha" element={<Gacha />} />
           <Route path="/collection" element={<Collection />} />
           <Route path="/card/:id" element={<CardDetail />} />
+          <Route path="/review" element={<Review />} />
         </Routes>
         <BottomNav />
       </div>
