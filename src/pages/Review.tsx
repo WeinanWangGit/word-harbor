@@ -146,7 +146,7 @@ export default function Review() {
   }
 
   return (
-    <div className="flex-1 p-4 pb-20">
+    <div className="flex-1 p-4 lg:p-6 pb-20">
       {/* 进度 */}
       <div className="mb-6">
         <div className="flex justify-between text-sm text-gray-400 mb-2">

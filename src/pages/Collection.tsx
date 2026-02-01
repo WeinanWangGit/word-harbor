@@ -52,7 +52,7 @@ export default function Collection() {
   const completionRate = Math.round((ownedCount / totalCount) * 100)
 
   return (
-    <div className="flex-1 p-4 pb-20">
+    <div className="flex-1 p-4 lg:p-6 pb-20">
       {/* 标题 */}
       <div className="text-center mb-6">
         <h1 className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">

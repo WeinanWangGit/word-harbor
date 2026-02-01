@@ -53,7 +53,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex-1 p-4 pb-20">
+    <div className="flex-1 p-4 pb-20 lg:p-6">
       {/* Header */}
       <div className="text-center mb-6">
         <h1 className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">

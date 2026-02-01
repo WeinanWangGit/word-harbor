@@ -79,7 +79,7 @@ export default function Gacha() {
   }
 
   return (
-    <div className="flex-1 p-4 flex flex-col items-center justify-center">
+    <div className="flex-1 p-4 lg:p-6 flex flex-col items-center justify-center">
       {/* 标题 */}
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
